@@ -1,0 +1,9 @@
+.btn[type="submit"] {
+    position: relative;
+    right: 22%;
+}
+
+.form[type="search"] {
+    border-radius: 10px;
+
+}
