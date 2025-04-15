@@ -16,18 +16,19 @@
 
 
 -- Copiando estrutura do banco de dados para video_in_video_api
-DROP DATABASE IF EXISTS `video_in_video_api`;
 CREATE DATABASE IF NOT EXISTS `video_in_video_api` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `video_in_video_api`;
 
--- Copiando estrutura para tabela video_in_video_api.title
-DROP TABLE IF EXISTS `title`;
-CREATE TABLE IF NOT EXISTS `title` (
+-- Copiando estrutura para tabela video_in_video_api.video
+CREATE TABLE IF NOT EXISTS `video` (
   `id_video` int unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `description` text,
+  `completed` bit(1) DEFAULT NULL,
   PRIMARY KEY (`id_video`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Copiando dados para a tabela video_in_video_api.title: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela video_in_video_api.video: ~0 rows (aproximadamente)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
