@@ -125,60 +125,10 @@ if (isset($_POST['deletar']) && !empty($_POST['id_deletar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consumindo a API de Vídeos (PHP)</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-        }
-        h2 {
-            margin-top: 20px;
-        }
-        #dados {
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            white-space: pre-wrap; /* Para preservar a formatação JSON */
-        }
-        .form-container {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #eee;
-            background-color: #f9f9f9;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"], textarea, button {
-            width: calc(100% - 12px);
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .error {
-            color: red;
-            margin-top: 5px;
-        }
-        .success {
-            color: green;
-            margin-top: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Consumindo a API de Vídeos (PHP)</h1>
+    <img src="./img/VID.png" width="150" height="150" alt="">
 
     <?php if ($erro): ?>
         <div class="error"><?php echo $erro; ?></div>
