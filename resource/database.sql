@@ -20,11 +20,10 @@ CREATE DATABASE IF NOT EXISTS `video_in_video_api` /*!40100 DEFAULT CHARACTER SE
 USE `video_in_video_api`;
 
 -- Copiando estrutura para tabela video_in_video_api.video
-CREATE TABLE IF NOT EXISTS `video` (
+CREATE TABLE IF NOT EXISTS `title` (
   `id_video` int unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `description` text,
-  `completed` bit(1) DEFAULT NULL,
+  `titulo` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `descricao` text,
   PRIMARY KEY (`id_video`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

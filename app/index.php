@@ -18,7 +18,7 @@
     <div id="resultados">
         <?php
         if (isset($_GET['acao']) && $_GET['acao'] === 'listar') {
-            $apiUrl = 'http://localhost/VIDEOinVIDEO/api-video-in-video/api/api.php'; // Substitua pelo caminho correto
+            $apiUrl = 'http://localhost/videoinvideo/api-video-in-video/api/api.php'; // Substitua pelo caminho correto
             $response = file_get_contents($apiUrl);
             if ($response !== false) {
                 $data = json_decode($response, true);
@@ -54,7 +54,7 @@
         if (isset($_GET['acao']) && $_GET['acao'] === 'buscar' && isset($_GET['id'])) {
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             if ($id !== false && $id > 0) {
-                $apiUrl = 'http://localhost/frudru/api-video-in-video/api/api.php?id=' . $id; // Substitua pelo caminho correto
+                $apiUrl = 'http://localhost/videoinvideo/api-video-in-video/api/api.php?id=' . $id; // Substitua pelo caminho correto
                 $response = file_get_contents($apiUrl);
                 if ($response !== false) {
                     $data = json_decode($response, true);
@@ -89,7 +89,7 @@
     <div id="resultado-adicionar">
         <?php
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao']) && $_POST['acao'] === 'adicionar') {
-            $apiUrl = 'http://localhost/frudru/api-video-in-video/api/api.php'; // Substitua pelo caminho correto
+            $apiUrl = 'http://localhost/videoinvideo/api-video-in-video/api/api.php'; // Substitua pelo caminho correto
             $titulo = filter_input(INPUT_POST, 'titulo');
             $descricao = filter_input(INPUT_POST, 'descricao');
             $data = json_encode(['titulo' => $titulo, 'descricao' => $descricao]);
@@ -141,7 +141,7 @@
             $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
             $titulo = filter_input(INPUT_POST, 'titulo');
             $descricao = filter_input(INPUT_POST, 'descricao');
-            $apiUrl = 'http://localhost/frudru/api-video-in-video/api/api.php?id=' . $id; // Substitua pelo caminho correto
+            $apiUrl = 'http://localhost/videoinvideo/api-video-in-video/api/api.php?id=' . $id; // Substitua pelo caminho correto
             $data = json_encode(['titulo' => $titulo, 'descricao' => $descricao]);
 
             $options = [
@@ -181,7 +181,7 @@
         <?php
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao']) && $_POST['acao'] === 'deletar' && isset($_POST['id'])) {
             $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
-            $apiUrl = 'http://localhost/frudru/api-video-in-video/api/api.php?id=' . $id; // Substitua pelo caminho correto
+            $apiUrl = 'http://localhost/videoinvideo/api-video-in-video/api/api.php?id=' . $id; // Substitua pelo caminho correto
 
             $options = [
                 'http' => [
