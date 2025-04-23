@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1, h2 {
+    color: black;
+}
+#resultados {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.video-item {
+    border-bottom: 1px dashed #eee;
+    padding: 10px 0;
+}
+.video-item:last-child {
+    border-bottom: none;
+}
+#formulario-adicionar, #formulario-atualizar, #formulario-deletar {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"], textarea, input[type="number"], button {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #65b1d8;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.erro {
+    color: red;
+    font-weight: bold;
+}
+.sucesso {
+    color: green;
+    font-weight: bold;
+}
+
+img {
+    align-items: center;
+    justify-content: center;
+}
+
